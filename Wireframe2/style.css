@@ -1,0 +1,88 @@
+/**
+ * Css wireframe style 
+ **/
+
+* {
+  box-sizing: border-box;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ccc;
+  color: #21736f;
+}
+
+header {
+  padding: 20px;
+  background: #fff;
+  margin: 8px auto;
+  max-width: 960px;
+}
+
+nav {
+  padding: 20px;
+  background: #fff;
+  margin: 8px auto;
+  max-width: 960px;
+}
+
+main {
+  background-color: #fff;
+  padding: 10px;
+}
+
+aside {
+  padding: 20px;
+  background: #fff;
+}
+
+footer {
+  clear: both;
+  padding: 20px;
+  background-color: #fff;
+  margin: 8px auto;
+  max-width: 960px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 10px;
+  max-width: 960px;
+  margin: 8px auto;
+  overflow: auto;
+}
+
+.content p {
+  padding: 10px;
+}
+
+.content article {
+  padding: 10px;
+  background-color: #ccc;
+  color: #fff;
+}
+
+.content article h1 {
+  padding: 10px;
+  margin: 10px 0px;
+  background-color: #fff;
+}
+
+.content article p {
+  background-color: #fff;
+}
+
+h1,
+p {
+  color: #21736f;
+}
