@@ -133,11 +133,13 @@
       <main>
         <div class="content">
           <div class="calculator">
-            <div class="box">Show Calculator</div>
+            <div class="box" onClick="showCalculator()">Show Calculator</div>
             <div id="calculator-form">
               <input type="text" id="firstNum" class="text-box" />
               <input type="text" id="secondNum" class="text-box" />
-              <button id="show-answer">Show Answer</button>
+              <button id="show-answer" onClick="showAnswer()">
+                Show Answer
+              </button>
             </div>
             <div id="result"></div>
           </div>
@@ -147,5 +149,37 @@
       <!-- footer -->
       <footer>Footer</footer>
     </div>
+
+    <!-- Javascript -->
+    <script type="text/javascript">
+      // show calculator
+      function showCalculator() {
+        document.getElementById('calculator-form').style.display = 'block';
+        document.getElementById('result').style.display = 'block';
+      }
+
+      // show Answer function
+      function showAnswer() {
+        let elem = document.getElementById('result');
+        elem.innerHTML = '';
+        const firstNumb = document.getElementById('firstNum').value;
+        const secondNumb = document.getElementById('secondNum').value;
+        let result = parseFloat(firstNumb) + parseFloat(secondNumb);
+
+        let digit = result.toString().length;
+
+        if (digit >= 2 && !isNaN(result)) {
+          elem.innerHTML =
+            elem.innerHTML +
+            result +
+            '<span class="notice">This is a huge number</span>';
+        } else if (digit >= 2 && isNaN(result)) {
+          elem.innerHTML =
+            elem.innerHTML + '<span class="notice">' + result + '</span>';
+        } else {
+          elem.innerHTML = elem.innerHTML + result;
+        }
+      }
+    </script>
   </body>
 </html>
