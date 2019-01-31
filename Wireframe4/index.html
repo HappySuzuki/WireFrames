@@ -6,15 +6,146 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Wireframe4</title>
     <link rel="icon" type="image/png" href="favicon.png" />
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+
+      header {
+        background-color: #fff;
+        padding: 20px;
+        border-bottom: 1px solid #ccc;
+        text-align: center;
+      }
+
+      main {
+        flex: 1;
+        overflow: auto;
+        background-color: #ccc;
+      }
+
+      footer {
+        background-color: #fff;
+        padding: 20px;
+        border-top: 1px solid #ccc;
+        text-align: center;
+      }
+
+      .wrapper {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background-color: #4aaaa5;
+      }
+
+      ::-webkit-scrollbar-track {
+        background-color: #ccc;
+      }
+
+      .box {
+        max-width: 200px;
+        padding: 20px;
+        cursor: pointer;
+        margin: 15px auto;
+        text-align: center;
+        background-color: #0000ff96;
+      }
+
+      .box:hover {
+        color: #fff;
+      }
+
+      .notice {
+        color: red;
+        margin: 5px;
+        display: block;
+      }
+
+      .calculator {
+        max-width: 960px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #64a3c1;
+        background-color: #fff;
+      }
+
+      .text-box {
+        display: block;
+        margin: 15px auto;
+        border: none;
+        padding: 15px;
+        background-color: #ccc;
+        cursor: text;
+        text-align: center;
+        transition: background 250ms ease-in-out, transform 150ms ease;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+      }
+
+      #calculator-form {
+        display: none;
+      }
+
+      #result {
+        display: none;
+        text-align: center;
+        background-color: #cccccca3;
+        margin: 0 auto;
+        width: 300px;
+        padding: 20px 0px;
+      }
+
+      #show-answer {
+        display: block;
+        border: none;
+        padding: 1rem 2rem;
+        margin: 15px auto;
+        text-decoration: none;
+        background: #0069ed;
+        color: #ffffff;
+        font-family: sans-serif;
+        font-size: 1rem;
+        line-height: 1;
+        cursor: pointer;
+        text-align: center;
+        transition: background 250ms ease-in-out, transform 150ms ease;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+      }
+    </style>
   </head>
   <body>
-    <!-- header -->
-    <header></header>
+    <div class="wrapper">
+      <!-- header -->
+      <header>Header</header>
 
-    <!-- main -->
-    <main></main>
+      <!-- main -->
+      <main>
+        <div class="content">
+          <div class="calculator">
+            <div class="box">Show Calculator</div>
+            <div id="calculator-form">
+              <input type="text" id="firstNum" class="text-box" />
+              <input type="text" id="secondNum" class="text-box" />
+              <button id="show-answer">Show Answer</button>
+            </div>
+            <div id="result"></div>
+          </div>
+        </div>
+      </main>
 
-    <!-- footer -->
-    <footer></footer>
+      <!-- footer -->
+      <footer>Footer</footer>
+    </div>
   </body>
 </html>
