@@ -1,0 +1,44 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+header {
+  background-color: #fff;
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+
+main {
+  flex: 1;
+  overflow: auto;
+  background-color: #ccc;
+}
+
+footer {
+  background-color: #fff;
+  padding: 20px;
+  border-top: 1px solid #ccc;
+  text-align: center;
+}
+
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #4aaaa5;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ccc;
+}
