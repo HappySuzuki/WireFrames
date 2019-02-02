@@ -213,6 +213,17 @@ main {
   margin-left: auto;
 }
 
+img {
+  border: 0;
+  width: 100%;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+}
+
 p {
   color: #736565cc;
   line-height: 30px;
@@ -301,13 +312,6 @@ h6 {
 /* End layout styles */
 
 /* Start General styles */
-.active {
-  background-color: #4aaaa5;
-}
-
-.active a {
-  color: #fff;
-}
 
 ::-webkit-input-placeholder {
   color: #aaa;
@@ -353,9 +357,21 @@ header {
   align-items: center;
   justify-content: center;
 }
+nav ul {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+}
 
-nav ul li {
-  float: left;
+nav ul .active {
+  background-color: #4aaaa5;
+}
+
+nav ul .active a {
+  color: #fff;
 }
 
 nav ul li a {
@@ -500,12 +516,13 @@ fieldset {
   display: flex;
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .gallery figure {
   position: relative;
-  flex: 0 0 33.3333%;
-  margin: 15px 15px 15px 0px;
+  flex: 0 0 48%;
+  margin: 15px 0px;
   cursor: pointer;
 }
 
@@ -551,24 +568,31 @@ fieldset {
     width: 960px;
   }
 }
-@media only screen and (max-width: 980px) {
-  header {
-    padding: 20px 0px;
-  }
 
-  .logo {
-    padding: 25px 20px;
-    margin-bottom: 10px;
+@media only screen and (max-width: 980px) {
+  header .container {
+    padding: 0;
   }
 
   .menu {
     flex-direction: column;
   }
 
-  nav ul li {
-    float: none;
-    padding: 0px;
-    text-align: center;
+  .menu .logo {
+    margin: 0;
+  }
+
+  nav ul .active {
+    background-color: #fff;
+  }
+
+  nav ul .active a {
+    color: #ccc;
+  }
+
+  nav ul li a:hover {
+    background-color: #fff;
+    color: #ccc;
   }
 
   nav ul li a {
@@ -593,6 +617,10 @@ fieldset {
   .gallery figure {
     flex: none;
     margin: 10px 0px;
+  }
+
+  .gallery figure figcaption {
+    opacity: 1;
   }
 }
 
