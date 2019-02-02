@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Wireframe3</title>
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+  </head>
+  <body>
+    <!-- header -->
+    <header role="banner">
+      <div class="container">
+        <div class="menu">
+          <a href="#home" class="logo">Logo</a>
+          <nav role="navigation">
+            <ul role="menubar">
+              <li role="menuitem"><a href="#about">About</a></li>
+              <li role="menuitem"><a href="#portfolio">Portfolio</a></li>
+              <li role="menuitem"><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- main -->
+    <main role="main">
+      <div class="container">
+        <section class="content">
+          <section id="home"><h1>This is Home Page</h1></section>
+          <section id="portfolio">
+            <h1 class="title">portfolio</h1>
+            <figure role="group" class="gallery">
+              <figure>
+                <img
+                  src="./assets/images/320x200.png"
+                  alt="Description of picture 1"
+                />
+                <figcaption>Caption for Picture 1</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="./assets/images/320x200.png"
+                  alt="Description of picture 2"
+                />
+                <figcaption>Caption for Picture 2</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="./assets/images/320x200.png"
+                  alt="Description of picture 3"
+                />
+                <figcaption>Caption for Picture 3</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="./assets/images/320x200.png"
+                  alt="Description of picture 4"
+                />
+                <figcaption>Caption for Picture 4</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="./assets/images/320x200.png"
+                  alt="Description of picture 5"
+                />
+                <figcaption>Caption for Picture 5</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="./assets/images/320x200.png"
+                  alt="Description of picture 6"
+                />
+                <figcaption>Caption for Picture 6</figcaption>
+              </figure>
+            </figure>
+          </section>
+          <section id="contact">
+            <h1 class="title">contact</h1>
+            <form action="" method="post" class="contact" role="form">
+              <fieldset>
+                <label for="name">Name</label>
+                <input
+                  id="name"
+                  placeholder="Your name"
+                  type="text"
+                  tabindex="1"
+                  required
+                  aria-required="true"
+                  autofocus
+                />
+              </fieldset>
+              <fieldset>
+                <label for="email">Email</label>
+                <input
+                  id="email"
+                  placeholder="Your Email Address"
+                  type="email"
+                  tabindex="2"
+                  aria-required="true"
+                  required
+                />
+              </fieldset>
+              <fieldset>
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  placeholder="Type your Message Here...."
+                  tabindex="3"
+                  required
+                  aria-multiline="true"
+                  aria-required="true"
+                ></textarea>
+              </fieldset>
+              <fieldset>
+                <button name="submit" type="submit" data-submit="...Sending">
+                  Submit
+                </button>
+              </fieldset>
+            </form>
+          </section>
+          <section id="about">
+            <article role="article">
+              <h1>about</h1>
+              <div class="flex-figure">
+                <figure><img src="./assets/images/300x300.png" /></figure>
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book. It has survived not only five centuries, but
+                  also the leap into electronic typesetting, remaining
+                  essentially unchanged.
+                </p>
+              </div>
+              <p>
+                The standard chunk of Lorem Ipsum used since the 1500s is
+                reproduced below for those interested. Sections 1.10.32 and
+                1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also
+                reproduced in their exact original form, accompanied by English
+                versions from the 1914 translation by H. Rackham.
+              </p>
+              <p>
+                The standard chunk of Lorem Ipsum used since the 1500s is
+                reproduced below for those interested. Sections 1.10.32 and
+                1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also
+                reproduced in their exact original form, accompanied by English
+                versions from the 1914 translation by H. Rackham.
+              </p>
+            </article>
+          </section>
+        </section>
+      </div>
+    </main>
+
+    <!-- footer -->
+    <footer role="contentinfo">
+      <div class="container">
+        <div class="copyright"><span>copyright ©</span></div>
+      </div>
+    </footer>
+
+    <noscript> You need to enable JavaScript to run this app. </noscript>
+    <!-- Add your site or application content here -->
+    <script src="assets/js/modernizr-3.6.0.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      window.jQuery ||
+        document.write(
+          '<script src="assets/js/jquery-3.3.1.min.js"><\/script>'
+        );
+
+      $(document).ready(function() {
+        // on page load...:
+        $('section.content section').hide(); // Hide all content
+
+        /* Check for hashtag in url */
+        if (window.location.hash.length > 0) {
+          $('nav li a').each(function() {
+            if ($(this).attr('href') == window.location.hash)
+              $(this)
+                .parent()
+                .addClass('active')
+                .show();
+          });
+          $(window.location.hash).fadeIn();
+        } else {
+          // if no hashtag
+          $('nav li:first')
+            .addClass('active')
+            .show();
+
+          $('section.content section:first').show();
+        }
+
+        $('.logo').click(function() {
+          $('section.content section').hide();
+          $('#home').fadeIn();
+        });
+
+        // On Click Event
+        $('nav li').click(function() {
+          $('nav li').removeClass('active');
+          $(this).addClass('active');
+
+          $('section.content section').hide();
+
+          var activePage = $(this)
+            .find('a')
+            .attr('href');
+          $(activePage).fadeIn();
+        });
+      });
+    </script>
+  </body>
+</html>
