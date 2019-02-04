@@ -10,174 +10,172 @@
     <link rel="icon" type="image/png" href="assets/images/favicon.png" />
   </head>
   <body>
-    <!-- header -->
-    <header role="banner">
+    <!-- nav -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
       <div class="container">
-        <div class="menu">
-          <a href="#home" class="logo">Logo</a>
-          <nav role="navigation">
-            <ul role="menubar">
-              <li role="menuitem"><a href="#about">About</a></li>
-              <li role="menuitem"><a href="#portfolio">Portfolio</a></li>
-              <li role="menuitem"><a href="#contact">Contact</a></li>
-            </ul>
-          </nav>
-        </div>
+        <a class="navbar-brand" href="#home">Logo</a>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#about"
+              >About <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#portfolio">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
       </div>
-    </header>
+    </nav>
 
     <!-- main -->
     <main role="main">
       <div class="container">
-        <section class="content">
+        <section class="wrapper">
           <section id="home"><h1>This is Home Page</h1></section>
           <section id="portfolio">
             <h1 class="title">portfolio</h1>
-            <figure role="group" class="gallery">
-              <figure>
-                <img
-                  src="./assets/images/320x200.png"
-                  alt="Description of picture 1"
-                />
-                <figcaption>Caption for Picture 1</figcaption>
-              </figure>
-              <figure>
-                <img
-                  src="./assets/images/320x200.png"
-                  alt="Description of picture 2"
-                />
-                <figcaption>Caption for Picture 2</figcaption>
-              </figure>
-              <figure>
-                <img
-                  src="./assets/images/320x200.png"
-                  alt="Description of picture 3"
-                />
-                <figcaption>Caption for Picture 3</figcaption>
-              </figure>
-              <figure>
-                <img
-                  src="./assets/images/320x200.png"
-                  alt="Description of picture 4"
-                />
-                <figcaption>Caption for Picture 4</figcaption>
-              </figure>
-              <figure>
-                <img
-                  src="./assets/images/320x200.png"
-                  alt="Description of picture 5"
-                />
-                <figcaption>Caption for Picture 5</figcaption>
-              </figure>
-              <figure>
-                <img
-                  src="./assets/images/320x200.png"
-                  alt="Description of picture 6"
-                />
-                <figcaption>Caption for Picture 6</figcaption>
-              </figure>
-            </figure>
+            <div class="row gallery">
+              <div class="col-lg-4 col-sm-6 col-12">
+                <div class="image">
+                  <img
+                    src="./assets/images/320x200.png"
+                    alt="Description of picture 1"
+                  />
+                  <a>Caption for Picture 1</a>
+                </div>
+              </div>
+              <div class="col-lg-4 col-sm-6 col-12">
+                <div class="image">
+                  <img
+                    src="./assets/images/320x200.png"
+                    alt="Description of picture 2"
+                  />
+                  <a>Caption for Picture 2</a>
+                </div>
+              </div>
+              <div class="col-lg-4 col-sm-6 col-12">
+                <div class="image">
+                  <img
+                    src="./assets/images/320x200.png"
+                    alt="Description of picture 3"
+                  />
+                  <a>Caption for Picture 3</a>
+                </div>
+              </div>
+              <div class="col-lg-4 col-sm-6 col-12">
+                <div class="image">
+                  <img
+                    src="./assets/images/320x200.png"
+                    alt="Description of picture 4"
+                  />
+                  <a>Caption for Picture 4</a>
+                </div>
+              </div>
+              <div class="col-lg-4 col-sm-6 col-12">
+                <div class="image">
+                  <img
+                    src="./assets/images/320x200.png"
+                    alt="Description of picture 5"
+                  />
+                  <a>Caption for Picture 5</a>
+                </div>
+              </div>
+              <div class="col-lg-4 col-sm-6 col-12">
+                <div class="image">
+                  <img
+                    src="./assets/images/320x200.png"
+                    alt="Description of picture 6"
+                  />
+                  <a>Caption for Picture 6</a>
+                </div>
+              </div>
+            </div>
           </section>
           <section id="contact">
             <h1 class="title">contact</h1>
-            <form action="" method="post" class="contact" role="form">
-              <fieldset>
-                <label for="name">Name</label>
+            <form>
+              <div class="form-group">
+                <label for="exampleInputName">Name</label>
                 <input
-                  id="name"
-                  placeholder="Your name"
                   type="text"
-                  tabindex="1"
-                  required
-                  aria-required="true"
-                  autofocus
+                  class="form-control"
+                  id="exampleInputName"
+                  placeholder="Your Name"
                 />
-              </fieldset>
-              <fieldset>
-                <label for="email">Email</label>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
                 <input
-                  id="email"
-                  placeholder="Your Email Address"
                   type="email"
-                  tabindex="2"
-                  aria-required="true"
-                  required
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="Your Email"
                 />
-              </fieldset>
-              <fieldset>
-                <label for="message">Message</label>
+                <small id="emailHelp" class="form-text text-muted"
+                  >We'll never share your email with anyone else.</small
+                >
+              </div>
+              <div class="form-group">
+                <label for="exampleFormMessage">Message</label>
                 <textarea
-                  id="message"
-                  placeholder="Type your Message Here...."
-                  tabindex="3"
-                  required
-                  aria-multiline="true"
-                  aria-required="true"
+                  class="form-control"
+                  id="exampleFormMessage"
+                  rows="3"
                 ></textarea>
-              </fieldset>
-              <fieldset>
-                <button name="submit" type="submit" data-submit="...Sending">
-                  Submit
-                </button>
-              </fieldset>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Submit</button>
             </form>
           </section>
           <section id="about">
             <article role="article">
               <h1>about</h1>
-              <div class="flex-figure">
-                <figure><img src="./assets/images/300x300.png" /></figure>
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book. It has survived not only five centuries, but
-                  also the leap into electronic typesetting, remaining
-                  essentially unchanged.
-                </p>
+              <div class="row">
+                <div class="col-md-2">
+                  <figure>
+                    <img src="./assets/images/300x300.png" />
+                  </figure>
+                </div>
+                <div class="col-md-10">
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a
+                    type specimen book. It has survived not only five centuries,
+                    but also the leap into electronic typesetting, remaining
+                    essentially unchanged.
+                  </p>
+                </div>
+                <div class="col-md-12">
+                  <p>
+                    The standard chunk of Lorem Ipsum used since the 1500s is
+                    reproduced below for those interested. Sections 1.10.32 and
+                    1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are
+                    also reproduced in their exact original form, accompanied by
+                    English versions from the 1914 translation by H. Rackham.
+                  </p>
+                  <p>
+                    The standard chunk of Lorem Ipsum used since the 1500s is
+                    reproduced below for those interested. Sections 1.10.32 and
+                    1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are
+                    also reproduced in their exact original form, accompanied by
+                    English versions from the 1914 translation by H. Rackham.
+                  </p>
+                </div>
               </div>
-              <p>
-                The standard chunk of Lorem Ipsum used since the 1500s is
-                reproduced below for those interested. Sections 1.10.32 and
-                1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also
-                reproduced in their exact original form, accompanied by English
-                versions from the 1914 translation by H. Rackham.
-              </p>
-              <p>
-                The standard chunk of Lorem Ipsum used since the 1500s is
-                reproduced below for those interested. Sections 1.10.32 and
-                1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also
-                reproduced in their exact original form, accompanied by English
-                versions from the 1914 translation by H. Rackham.
-              </p>
             </article>
           </section>
         </section>
-
-        <!-- grid -->
-        <div class=" grid container">
-          <div class="row">
-            <div class="col-lg-1 col-sm-12">1</div>
-            <div class="col-lg-1 col-sm-12">2</div>
-            <div class="col-lg-1 col-sm-12">3</div>
-            <div class="col-lg-1 col-sm-12">4</div>
-            <div class="col-lg-1 col-sm-12">5</div>
-            <div class="col-lg-1 col-sm-12">6</div>
-            <div class="col-lg-1 col-sm-12">7</div>
-            <div class="col-lg-1 col-sm-12">8</div>
-            <div class="col-lg-1 col-sm-12">9</div>
-            <div class="col-lg-1 col-sm-12">10</div>
-            <div class="col-lg-1 col-sm-12">11</div>
-            <div class="col-lg-1 col-sm-12">12</div>
-          </div>
-        </div>
-        <!-- grid -->
       </div>
     </main>
 
     <!-- footer -->
-    <footer role="contentinfo">
+    <footer role="contentinfo" class="footer">
       <div class="container">
         <div class="copyright"><span>copyright ©</span></div>
       </div>
@@ -195,7 +193,7 @@
 
       $(document).ready(function() {
         // on page load...:
-        $('section.content section').hide(); // Hide all content
+        $('section.wrapper section').hide(); // Hide all content
 
         /* Check for hashtag in url */
         if (window.location.hash.length > 0) {
@@ -213,11 +211,11 @@
             .addClass('active')
             .show();
 
-          $('section.content section:first').show();
+          $('section.wrapper section:first').show();
         }
 
-        $('.logo').click(function() {
-          $('section.content section').hide();
+        $('.navbar-brand').click(function() {
+          $('section.wrapper section').hide();
           $('#home').fadeIn();
         });
 
@@ -226,7 +224,7 @@
           $('nav li').removeClass('active');
           $(this).addClass('active');
 
-          $('section.content section').hide();
+          $('section.wrapper section').hide();
 
           var activePage = $(this)
             .find('a')

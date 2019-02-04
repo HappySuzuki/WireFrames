@@ -1,412 +1,112 @@
 /* CSS styles for HTML5 skeleton  */
 
-/* Start layout styles */
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: '';
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-mark {
-  background-color: transparent;
-  color: inherit;
-}
-
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-
-input,
-select,
-textarea {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-}
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-
-*,
-*:before,
-*:after {
-  list-style: none;
-  margin: 0px;
-  padding: 0px;
-  outline: none;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-}
-
-/* Start scrollbar styles */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #4aaaa5;
-}
-
-::-webkit-scrollbar-track {
-  background: #ccc;
-}
-/* End scrollbar styles */
-
-body {
-  display: flex;
-  flex-direction: column;
-  height: 100vh; /* Avoid the IE 10-11 `min-height` bug. */
-  font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
-  font-size: 15px;
-  color: #aaa;
-  -ms-overflow-style: scrollbar;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
-
-main {
-  flex: 1 0 auto;
-  background-color: #eae7e775;
-}
-
-.container {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-img {
-  border: 0;
-  width: 100%;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-}
-
-p {
-  color: #736565cc;
-  line-height: 30px;
-}
-
-a {
-  color: #ccc;
-  font-size: 15px;
-  text-decoration: none;
-}
-
-/* Default link styling */
-a:link {
-  color: #ccc;
-}
-a:visited {
-  color: #ccc;
-}
-
-a:hover,
-a:focus {
-  color: #4aaaa5;
-}
-
-a:active {
-  color: #4aaaa5;
-}
-
-strong,
-b {
-  font-weight: 600;
-}
-
-em,
-i {
-  font-style: italic;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 300;
-  line-height: 1.5;
-  text-transform: uppercase;
-  margin: 0 0 1.5rem 0;
-}
-
-h1 a,
-h2 a,
-h3 a,
-h4 a,
-h5 a,
-h6 a {
-  color: inherit;
-  text-decoration: none;
-}
-
-h1 {
-  font-size: 3rem;
-  line-height: 1.2;
-}
-
-h2 {
-  font-size: 2.25rem;
-  line-height: 1.3;
-}
-
-h3 {
-  font-size: 1.25rem;
-}
-
-h4 {
-  font-size: 1rem;
-}
-
-h5 {
-  font-size: 0.9rem;
-}
-
-h6 {
-  font-size: 0.7rem;
-}
-/* End layout styles */
-
-/* Start General styles */
-
-::-webkit-input-placeholder {
-  color: #aaa;
-}
-
-:-moz-placeholder {
-  color: #aaa;
-}
-
-::-moz-placeholder {
-  color: #aaa;
-}
-
-:-ms-input-placeholder {
-  color: #aaa;
-}
-/* End General styles */
-
-/* Start header styles  */
-header {
-  background-color: #fff;
+/* Start Bootstrap overrides */
+.navbar {
+  padding: 0 !important;
   border-bottom: 1px solid #dddddd;
 }
 
-.menu {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  justify-content: space-between;
-}
-
-.menu .logo {
-  color: #fff;
+.navbar-brand {
   background-color: #4aaaa5;
-  padding: 10px 20px;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  color: #fff !important;
+  padding: 12px 20px !important;
 }
-nav ul {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  justify-content: center;
+/* End Bootstrap overrides  */
+
+/* Start Responsive Styles*/
+/* Extra small devices (phones, less than 768px) */
+@media (max-width: 768px) {
+  .navbar .container {
+    min-width: 100%;
+  }
+
+  .navbar-brand {
+    width: 100%;
+    text-align: center;
+    margin: 0 !important;
+  }
+
+  .navbar-nav {
+    flex-direction: row !important;
+    margin: 0 auto;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 5px;
+  }
 }
 
-nav ul .active {
-  background-color: #4aaaa5;
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .navbar .container {
+    min-width: 100%;
+  }
+
+  .navbar-brand {
+    width: 100%;
+    text-align: center;
+    margin: 0 !important;
+  }
+
+  .navbar-nav {
+    flex-direction: row !important;
+    margin: 0 auto;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 5px;
+  }
 }
 
-nav ul .active a {
-  color: #fff;
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199px) {
 }
 
-nav ul li a {
-  padding: 25px 20px;
-  display: block;
-  transition: all 0.5s ease 0s;
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+/* End Responsive Styles*/
+
+/* layout styles */
+html {
+  position: relative;
+  min-height: 100%;
 }
 
-nav ul li a:hover {
-  background-color: #4aaaa5;
-  color: #fff;
-  transition: all 0.5s ease 0s;
+body {
+  margin-bottom: 40px !important;
+  background-color: #eae7e775 !important;
 }
-/* End header styles  */
+
+img {
+  width: 100%;
+}
+/* layout styles */
 
 /* Start footer styles  */
-footer {
-  flex-shrink: 0;
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
   background-color: #cccccc;
-  border-top: 2px solid #4aaaa5;
+  border-top: 1px solid #4aaaa5;
   color: #fff;
   padding: 10px 0px;
 }
 
-footer .copyright {
+.footer .copyright {
   text-align: center;
 }
 /* End footer styles  */
 
 /* Start CMS styles */
-.content {
-  margin: 20px 0px;
+.wrapper {
+  margin: 70px 0px;
 }
 
 section h1 {
+  margin-bottom: 15px;
   padding-bottom: 12px;
   border-bottom: 1px solid #ccc;
   text-transform: capitalize;
@@ -414,122 +114,34 @@ section h1 {
   color: #4aaaa5;
 }
 
-article p {
-  margin-bottom: 10px;
-}
-
-article img {
-  height: 180px;
-  width: 180px;
-  margin-right: 10px;
-}
-
-.content section {
+.wrapper section {
   background-color: #fff;
   padding: 20px;
   border-radius: 0;
+  box-shadow: 5px -4px 18px #cccc;
 }
 /* End CMS styles*/
 
-/* Start about-us page */
-.flex-figure {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  margin-bottom: 25px;
-}
-/* End about-us page */
-
 /* Start contact-us page */
-.contact label {
-  display: block;
-  margin-bottom: 10px;
-  color: #888;
-  font-size: 15px;
-}
-
-fieldset {
-  border: medium none !important;
-  margin: 0 0 10px;
-  min-width: 100%;
-  padding: 0;
-  width: 100%;
-}
-
-.contact input[type='text'],
-.contact input[type='email'],
-.contact textarea {
-  width: 100%;
-  border: 1px solid #ccc;
-  background-color: #fff;
-  margin: 0 0 5px;
-  padding: 10px;
-}
-
-.contact input[type='text']:hover,
-.contact input[type='email']:hover,
-.contact textarea:hover {
-  -webkit-transition: border-color 0.3s ease-in-out;
-  -moz-transition: border-color 0.3s ease-in-out;
-  transition: border-color 0.3s ease-in-out;
-  border: 1px solid #aaa;
-}
-
-.contact textarea {
-  height: 100px;
-  max-width: 100%;
-  resize: none;
-}
-
-.contact button[type='submit'] {
-  cursor: pointer;
-  border: none;
-  color: #fff;
-  background-color: #4aaaa5;
-  color: #fff;
-  margin: 0 0 5px;
-  padding: 10px;
-}
-
-.contact button[type='submit']:hover {
+#contact .btn {
   background-color: #35b3ac;
-  -webkit-transition: background 0.3s ease-in-out;
-  -moz-transition: background 0.3s ease-in-out;
-  transition: background-color 0.3s ease-in-out;
-}
-
-.contact input:focus,
-.contact textarea:focus {
-  outline: 0;
-  border: 1px solid #999;
+  border: none;
+  border-radius: 0;
 }
 /* End contact-us page */
 
 /* Start portfolio styles */
-.gallery {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.gallery figure {
+.gallery .image {
   position: relative;
-  flex: 0 0 48%;
-  margin: 15px 0px;
   cursor: pointer;
+  margin: 10px 0px;
 }
 
-.gallery figure figcaption {
+.gallery .image a {
   opacity: 0;
   position: absolute;
   bottom: 8%;
+  left: 0;
   width: 100%;
   text-align: center;
   color: #fff;
@@ -537,7 +149,7 @@ fieldset {
   padding: 15px;
 }
 
-.gallery figure:hover figcaption {
+.gallery div:hover a {
   opacity: 1;
   transition: all 0.9s ease 0s;
 }
@@ -550,84 +162,3 @@ fieldset {
   margin: 0;
 }
 /* End Homepage styles */
-
-/* Start Responsive Styles*/
-@media (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
-}
-@media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    /* width: 1170px; */
-    width: 960px;
-  }
-}
-
-@media only screen and (max-width: 980px) {
-  header .container {
-    padding: 0;
-  }
-
-  .menu {
-    flex-direction: column;
-  }
-
-  .menu .logo {
-    margin: 0;
-  }
-
-  nav ul .active {
-    background-color: #fff;
-  }
-
-  nav ul .active a {
-    color: #ccc;
-  }
-
-  nav ul li a:hover {
-    background-color: #fff;
-    color: #ccc;
-  }
-
-  nav ul li a {
-    padding: 10px;
-  }
-
-  .flex-figure {
-    flex-direction: column;
-    margin: 0;
-  }
-
-  .flex-figure img {
-    height: 100%;
-    width: 100%;
-  }
-
-  .gallery {
-    -webkit-justify-content: center;
-    justify-content: center;
-  }
-
-  .gallery figure {
-    flex: none;
-    margin: 10px 0px;
-  }
-
-  .gallery figure figcaption {
-    opacity: 1;
-  }
-}
-
-/* sm */
-@media (min-width: 768px) and (max-width: 991px) {
-  .gallery figure {
-    margin: 10px;
-  }
-}
-/* End Responsive styles*/
