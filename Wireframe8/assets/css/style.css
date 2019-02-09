@@ -1,0 +1,87 @@
+/* CSS styles for HTML5 skeleton  */
+
+/* Start Responsive Styles*/
+/* Extra small devices (phones, less than 768px) */
+@media (max-width: 768px) {
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+/* End Responsive Styles*/
+
+/* layout styles */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 40px !important;
+  background-image: url('../images/background.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+img {
+  width: 100%;
+}
+/* layout styles */
+
+/* Start header styles  */
+header {
+  width: 100%;
+  background-color: #cccccc3d;
+  color: #fff;
+  padding: 10px 0px;
+  text-align: center;
+}
+
+/* End header styles  */
+
+/* Start footer styles  */
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background-color: #cccccc3d;
+  color: #fff;
+  padding: 10px 0px;
+}
+
+footer .copyright {
+  text-align: center;
+}
+/* End footer styles  */
+
+/* Start CMS styles */
+.wrapper {
+  margin: 70px 0px;
+}
+
+section h1 {
+  margin-bottom: 15px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #ccc;
+  text-transform: capitalize;
+  font-size: 18px;
+  color: #4aaaa5;
+}
+
+.wrapper section {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 0;
+  box-shadow: 5px -4px 18px #cccc;
+}
+/* End CMS styles*/
