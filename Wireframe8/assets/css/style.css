@@ -1,20 +1,20 @@
 /* CSS styles for HTML5 skeleton  */
 
 /* Start Responsive Styles*/
-/* Extra small devices (phones, less than 768px) */
-@media (max-width: 768px) {
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
 }
-
-/* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
 }
-
-/* Medium devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199px) {
-}
-
-/* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
 }
 /* End Responsive Styles*/
 
@@ -35,6 +35,14 @@ body {
 img {
   width: 100%;
 }
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 /* layout styles */
 
 /* Start header styles  */
@@ -85,3 +93,20 @@ section h1 {
   box-shadow: 5px -4px 18px #cccc;
 }
 /* End CMS styles*/
+
+/* Start game styles */
+
+.game {
+  text-align: center;
+  background-color: #33375f;
+  color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 5px -4px 18px #5878ff;
+}
+
+.game div {
+  margin: 10px 0px;
+}
+
+/* End game styles */

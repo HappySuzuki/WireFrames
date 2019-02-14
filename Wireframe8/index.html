@@ -15,7 +15,21 @@
     <!-- main -->
     <main role="main">
       <div class="container">
-        <section class="wrapper"></section>
+        <section class="wrapper">
+          <div class="game">
+            <div class="correctGuess"></div>
+            <div class="wrongGuess"></div>
+            <div class="keyPressed"></div>
+            <p class="pressMessage"></p>
+            <p class="won"></p>
+            <p class="lose"></p>
+            <p class="remaining"></p>
+            <!--simpsons-->
+            <audio id="simpsons">
+              <source src="./assets/audio/simpsons.mp3" type="audio/mp3" />
+            </audio>
+          </div>
+        </section>
       </div>
     </main>
 
@@ -29,13 +43,13 @@
     <!-- js scripts -->
     <script src="assets/js/modernizr-3.6.0.min.js"></script>
     <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
     <script>
       window.jQuery ||
         document.write(
           '<script src="assets/js/jquery-3.3.1.min.js"><\/script>'
         );
-
-      $(document).ready(function() {});
     </script>
     <!-- js scripts  -->
   </body>
