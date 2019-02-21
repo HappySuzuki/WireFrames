@@ -1,4 +1,6 @@
-# Word Guess Game
+# Star Wars Game
+
+- Star Wars RPG Game
 
 ## Languages & tools
 
