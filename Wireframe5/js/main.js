@@ -1,4 +1,4 @@
-var people = [
+const people = [
   {
     name: 'test1',
     age: 13
@@ -13,10 +13,10 @@ var people = [
   }
 ];
 
-let result = document.getElementById('result');
+const result = document.getElementById('result');
 
-for (var i = 0; i < people.length; i++) {
-  var person = people[i];
+for (let i = 0; i < people.length; i++) {
+  let person = people[i];
 
   result.innerHTML =
     result.innerHTML +
