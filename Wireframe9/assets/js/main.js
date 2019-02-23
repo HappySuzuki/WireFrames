@@ -1,6 +1,6 @@
 $(document).ready(function() {
   var fighters = [
-    { id: 1, name: 'luke', imgSrc: 'assets/images/luke.png', health: 300 },
+    { id: 1, name: 'luke', imgSrc: 'assets/images/luke.png', health: 100 },
     { id: 2, name: 'maul', imgSrc: 'assets/images/maul.png', health: 100 },
     { id: 3, name: 'obi', imgSrc: 'assets/images/obi.png', health: 100 },
     { id: 4, name: 'sidious', imgSrc: 'assets/images/sidious.png', health: 100 }
@@ -78,10 +78,35 @@ $(document).ready(function() {
     loadFighters(enemyDiv, enemies);
   };
 
+  // check if enemies left
+  var enemiesLeft = function() {
+    var newEnemies = fighters.filter(function(enemy) {
+      return enemy.id != fighter.id;
+    });
+
+    var enemiesLeft = [];
+
+    for (var i = 0; i < newEnemies.length; i++) {
+      if (newEnemies[i].health <= 0) {
+        enemiesLeft.push(newEnemies[i].health);
+      }
+    }
+
+    function isOut(currentValue) {
+      return (currentValue < 0) & (enemiesLeft.length == newEnemies.length);
+    }
+
+    if (enemiesLeft.every(isOut) == true) {
+      alert('You Won The Game !');
+      location.reload();
+    }
+  };
+
   // reduce fighter's health
   var complete = function(enemyHealth, fighterHealth) {
     if (enemyHealth <= 0) {
       alert('You Won!');
+      enemiesLeft();
       $('.enemyDiv .' + enemy).hide();
     } else if (fighterHealth <= 0) {
       // reset the game
