@@ -1,23 +1,5 @@
 /* CSS styles for HTML5 skeleton  */
 
-/* Start Responsive Styles*/
-@media (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
-}
-@media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
-}
-/* End Responsive Styles*/
-
 /* layout styles */
 html {
   position: relative;
@@ -53,7 +35,6 @@ header {
   padding: 10px 0px;
   text-align: center;
 }
-
 /* End header styles  */
 
 /* Start footer styles  */
@@ -76,35 +57,9 @@ footer .copyright {
 .wrapper {
   margin: 70px 0px;
 }
-
-section h1 {
-  margin-bottom: 15px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid #ccc;
-  text-transform: capitalize;
-  font-size: 18px;
-  color: #4aaaa5;
-}
-
-.wrapper section {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 0;
-  box-shadow: 5px -4px 18px #cccc;
-}
 /* End CMS styles*/
 
 /* Start game styles */
-
-.game {
-  /* text-align: center;
-  background-color: #33375f;
-  color: #fff;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 5px -4px 18px #5878ff; */
-}
-
 .game span {
   margin: 10px;
   color: #fff;
@@ -184,5 +139,22 @@ section h1 {
   flex-direction: row;
   justify-content: space-around;
 }
-
 /* End game styles */
+
+/* Start Responsive Styles*/
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Responsive Styles*/
