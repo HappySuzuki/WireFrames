@@ -62,7 +62,23 @@ footer .copyright {
 /* End CMS styles*/
 
 /* Start game styles */
+.game {
+  background-color: #724fc745;
+  padding: 20px;
+}
 
+.btn button {
+  display: block;
+  border: none;
+  padding: 1rem 2rem;
+  margin: 15px auto;
+  background: #0069ed;
+  color: #ffffff;
+  cursor: pointer;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
 /* End game styles */
 
 /* Start Responsive Styles*/
