@@ -34,15 +34,14 @@ $(document).ready(function() {
   var isRunning = false;
 
   $('.title').hide();
+  $('.timer').hide();
 
   // start the game
   var game = function() {
     timer();
     $('.title').show();
-
     question = questions[questionIndex];
-    $('.question').html(question.question);
-
+    $('.question').html('<span>Question </span>' + question.question);
     for (var i = 0; i < question.answers.length; i++) {
       $('.answers').append(
         '<li class="' + i + '">' + question.answers[i] + '</li>'
@@ -53,23 +52,20 @@ $(document).ready(function() {
   // handle next question
   var nextQuestion = function() {
     counter = 20;
-    timer();
     questionIndex++;
     $('.answers').empty();
+    $('.answer').html('');
 
     // check if questions are finished
     if (questionIndex >= questions.length) {
-      $('.answer').html(
-        'Correct: ' + correctAnswer + '<br/>' + 'Incorrect: ' + incorrectAnswer
-      );
-      setTimeout(function() {
-        resetGame();
-      }, 4000);
+      resetGame();
     } else {
+      timer();
+      $('.timer').hide();
       question = questions[questionIndex];
 
       for (var i = 0; i < question.answers.length; i++) {
-        $('.question').html(question.question);
+        $('.question').html('<span>Question </span>' + question.question);
         $('.answers').append(
           '<li class="' + i + '">' + question.answers[i] + '</li>'
         );
@@ -80,12 +76,18 @@ $(document).ready(function() {
   var timer = function() {
     if (!isRunning) {
       intervalId = setInterval(() => {
+        $('.timer').show();
         $('.timer').html('Time Remaining ' + counter);
         counter -= 1;
         isRunning = true;
         if (counter === 0) {
           incorrectAnswer++;
           stop();
+          $('.answer').html('Times Up!');
+
+          setTimeout(function() {
+            nextQuestion();
+          }, 4000);
         }
       }, 1000);
     }
@@ -114,7 +116,7 @@ $(document).ready(function() {
   };
 
   // handle pick answer
-  $(document).on('click', '.answers li', function(e) {
+  $(document).on('click', '.answers li', function() {
     var id = $(this).attr('class');
     checkAnswer(id);
   });
@@ -126,11 +128,24 @@ $(document).ready(function() {
     index = 0;
     answer = '';
     $('.title').hide();
-    $('#start').show();
+    $('.timer').hide();
     $('.timer').empty();
     $('.answers').empty();
     $('.question').empty();
-    $('.answer').empty();
+    $('.answer').html(
+      '<span>Correct Answers: ' +
+        correctAnswer +
+        '</span>' +
+        '<span>Incorrect Answers: ' +
+        incorrectAnswer +
+        '</span>'
+    );
+    setTimeout(function() {
+      $('#start').show();
+      $('.answer').empty();
+      correctAnswer = 0;
+      incorrectAnswer = 0;
+    }, 4000);
   };
 
   // handle start click
